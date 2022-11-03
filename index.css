@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html{
+    width: 100%;
+    height: 100vh;
+    /*overflow: hidden;*/
+}
+body{
+    background-color: hsl(36, 100%, 99%);
+    font-family: 'Inter', sans-serif;
+    position: relative;
+}
+.navbar-desktop{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 25px 250px 25px 250px;
+}
+.logo{
+    max-width: 100%;
+    object-fit: cover;
+}
+.option{
+    display: inline-block;
+    margin: 0 15px;
+}
+.option-last{
+    margin-right: 0;
+}
+.menu{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: hsl(236, 13%, 42%);
+}
+a:hover{
+    color: hsl(35, 77%, 62%);
+}
+.menu-icon-container{
+    display: none;
+}
+.empty-div{
+    background-color: rgba(0,0,0,0.8);
+    display: none;
+}
+.main-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0px 250px;
+    gap: 20px;
+}
+.item1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.item2{
+    grid-column-start: 1;
+}
+.item4{
+    grid-column-start: 3;
+    grid-row-start:1;
+    grid-row-end:3;
+}
+.web3-desktop{
+    max-width: 100%;
+    object-fit: cover;
+}
+.web3-mobile{
+    display: none;
+}
+.heading-container{
+    text-align: left;
+}
+.heading-container h1{
+    color: hsl(240, 100%, 5%);
+    font-weight: 800;
+    font-size: 45px;
+    width: 300px;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.para{
+    color: hsl(236, 13%, 42%);
+}
+.btn{
+    border: none;
+    background-color: hsl(5, 85%, 63%);
+    color: hsl(36, 100%, 99%);
+    width: 170px;
+    height: 50px;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    cursor: pointer;
+}
+.other-info{
+    background-color: hsl(240, 100%, 5%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    padding: 25px 20px;
+}
+.other-info h1{
+    color: hsl(35, 77%, 62%);
+}
+.block-container{
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.block1, .block2{
+    border-bottom: 0.5px solid white;
+    padding-bottom: 25px;
+}
+.block p{
+    margin-top: 10px;
+    font-size: 12.5px;
+    color: hsl(233, 8%, 79%);
+}
+.footer-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 15px;
+    padding: 30px 250px;
+}
+.card-img{
+    width: 90px;
+    height: 110px;
+    object-fit: cover;
+}
+.card{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 325px;
+    height: 110px;
+}
+.card-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+}
+.card-content h1{
+    color: hsl(233, 8%, 79%);
+}
+.card-content p{
+    color: hsl(236, 13%, 42%);
+    font-size: 13px;
+}
+
+@media(max-width:376px){
+    .navbar-desktop{
+        padding: 15px;
+        align-items: center;
+    }
+    .logo{
+        width: 50px;
+    }
+    .menu-container{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    .menu{
+        display: none;
+        background-color: hsl(36, 100%, 99%);
+        position: absolute;
+        top: 40px;
+        right: -15px;
+        height: 100vh;
+        width: 200px;
+        flex-direction: column;
+    }
+    .menu-icon-container{
+        display: inline-block;
+        cursor: pointer;
+    }
+    .icon-menu-close{
+        display: none;
+    }
+    .empty-div{
+        display: none;
+        position: absolute;
+        width: 100%;
+        top:55px;
+        height: 100%;
+    }
+    a{
+        color: hsl(240, 100%, 5%);
+    }
+    .option{
+        margin: 15px;
+    }
+    .link-1{
+        margin-top: 50px;
+    }
+    .web3-desktop{
+        display: none;
+    }
+    .web3-mobile{
+        display: inline-block;
+        max-width: 100%;
+        object-fit: cover;
+    }
+    .main-container{
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .heading-container h1{
+        width: 100%;
+        font-size: 40px;
+    }
+    .content{
+        height: 150px;
+    }
+    .other-info{
+        margin-top: 20px;
+    }
+    .footer-container{
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .card{
+        margin: 15px 0px;
+    }
+}
